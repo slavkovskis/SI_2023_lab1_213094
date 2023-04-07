@@ -1,0 +1,77 @@
+1 - креирање remote репо
+
+4 - git init - креираме git во локалниот репозиториум
+
+5 - git clone https://github.com/slavkovskis/SI_2023_lab1_213094.git - го клонираме remote репо со локалното
+
+6 - git add README.md - го додаваме фајлот
+    git commit -m "Initial commit" - го комитнуваме фајлот
+    git push - ги push-нуваме локалните комитнати измени на remote репо
+
+7 - git add SILab1.java
+    git commit -m "Add java class"
+    git push
+
+8 - git fetch - ги земаме измените од remote репото во нашиот локален репо
+    git pull - го користиме git pull одма после git fetch за за да се merge најновите измени
+
+9 - git branch - користиме за да создадеме нова гранка, тоа го повторуваме 3 пати
+
+10 - git checkout bug1 - се префрламе на гранката bug1
+
+11 - Изменив во SILab1.java во гранката
+     git add . - да се додадат измените да бидат staged од bug1
+     git push --set-upstream origin bug1 - да се намести upstream за pushнување
+     git commit -m "Fix wrong loop for reading"
+     git push
+
+12 - git checkout bug2
+
+13 - Изменив во SILab1.java во гранката
+     git add .
+     git push --set-upstream origin bug2
+     git commit -m "Fix wrong condition in filterOddNumber"
+     git push
+     Додадени автогенерирани фајлови од IDE
+
+14 - git checkout bug3 
+
+15 - Изменив во SILab1.java во гранката
+     git add .
+     git push --set-upstream origin bug3
+     git commit -m " Fix method sumEvenNumbers"
+     git push
+     Додадени автогенерирани фајлови од IDE
+
+16 - Сите фајлови се веќе синхронизирани со remote репото
+
+17 - git checkout master
+
+18 - git merge bug1 - направено е спојување без конфликти, Fast-Forward
+
+19 - git push - синхронизирање 
+
+20 - git merge bug2 - направено е спојување без конфликти, Merge made by the 'ort' strategy.
+
+21 - git push
+
+22 - git checkout bug3
+
+23 - git rebase master
+     Разрешени конфликти во .java фајлот после тоа променети измени во .xml фајлот
+     git add . - додаваме нов commit
+     git rebase --continue - продолжуваме со rebase
+
+24 - git checkout master
+
+25 - git merge bug3 - Овој error го добив, го разрешив со бирање на промени соодветни
+                    error: Your local changes to the following files would be overwritten by merge:
+                           .idea/workspace.xml
+                     Please commit your changes or stash them before you merge.
+                     Aborting
+                     Updating fd4acba..b8e6a09
+
+26 - git push
+
+27 - 
+     
